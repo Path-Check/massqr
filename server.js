@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const port = process.env.PORT || "8000";
 
-const privateKey = `-----BEGIN EC PARAMETERS-----
+const privateKey = process.env.K1 || `-----BEGIN EC PARAMETERS-----
 BgUrgQQACg==
 -----END EC PARAMETERS-----
 -----BEGIN EC PRIVATE KEY-----
@@ -19,7 +19,7 @@ oUQDQgAE6DeIun4EgMBLUmbtjQw7DilMJ82YIvOR2jz/IK0R/F7/zXY1z+gqvFXf
 DcJqR5clbAYlO9lHmvb4lsPLZHjugQ==
 -----END EC PRIVATE KEY-----`
 
-const publicKeyLink = '1A9.PCF.PW';
+const publicKeyLink = process.env.K1LINK || '1A9.PCF.PW';
 
 function getColorAPIURL(publicURL) {
   let urlMain = publicURL.split("?")[0];
