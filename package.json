@@ -2,9 +2,9 @@
   "name": "@pathcheck/massqr",
   "version": "0.0.1",
   "description": "Converts Massachusetts's Color Vaccine Record to a Verifiable QR",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./server.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
